@@ -1,12 +1,12 @@
-set nocompatible 
+set nocompatible
 filetype off
 
 imap jj <Esc>
 imap ii <Esc>
 
 " paredit
-let g:paredit_shortmaps = 1
-let g:paredit_smartjump = 1
+let g:paredit_shortmaps=1
+let g:paredit_smartjump=1
 
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -41,7 +41,7 @@ filetype plugin indent on
 syntax on
 
 " Line numbers
-set relativenumber 
+set relativenumber
 set number
 
 " folding
@@ -54,13 +54,13 @@ set splitright
 
 " airline
 set laststatus=2
-let g:airline_powerline_fonts = 1
-let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts=1
+let g:airline#extensions#tabline#enabled=1
 
 " theme
 set background=dark
 "colorscheme solarized
-colorscheme hybrid 
+colorscheme hybrid
 let g:airline_theme = 'hybridline'
 
 au VimEnter * RainbowParenthesesToggle
