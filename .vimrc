@@ -26,6 +26,7 @@ let g:paredit_smartjump=1
 
 autocmd BufRead,BufNewFile *.cljs setlocal filetype=clojure
 autocmd BufRead,BufNewFile build.boot setlocal filetype=clojure
+autocmd Filetype gitcommit setlocal spell textwidth=72
 
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
