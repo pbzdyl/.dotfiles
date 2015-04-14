@@ -15,6 +15,7 @@ set shiftwidth=2
 set expandtab
 set listchars=tab:▸\ ,eol:¬
 set list
+set backspace=indent,eol,start
 
 imap jj <Esc>
 imap ii <Esc>
