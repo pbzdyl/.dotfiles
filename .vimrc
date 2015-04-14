@@ -1,12 +1,30 @@
 set nocompatible
 filetype off
 
+set backup
+set swapfile
+set backupdir=~/.vim-tmp
+set directory=~/.vim-tmp
+
+set wildmenu
+set wildmode=full
+
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
+set expandtab
+set listchars=tab:▸\ ,eol:¬
+set list
+
 imap jj <Esc>
 imap ii <Esc>
 
 " paredit
-let g:paredit_shortmaps=1
+"let g:paredit_shortmaps=1
 let g:paredit_smartjump=1
+
+autocmd BufRead,BufNewFile *.cljs setlocal filetype=clojure
+autocmd BufRead,BufNewFile build.boot setlocal filetype=clojure
 
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -15,7 +33,10 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'kien/rainbow_parentheses.vim'
 Plugin 'tpope/vim-projectionist'
 Plugin 'tpope/vim-dispatch'
+Plugin 'guns/vim-clojure-static'
+Plugin 'guns/vim-clojure-highlight'
 Plugin 'tpope/vim-fireplace'
+Plugin 'dgrnbrg/vim-redl'
 Plugin 'rkneufeld/vim-boot'
 Plugin 'paredit.vim'
 Plugin 'bling/vim-airline'
@@ -34,6 +55,8 @@ Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-colorscheme-switcher'
 Plugin 'gberenfield/cljfold.vim'
 Plugin 'edkolev/promptline.vim'
+Plugin 'ntpeters/vim-better-whitespace'
+Plugin 'godlygeek/tabular'
 
 call vundle#end()
 
@@ -56,6 +79,9 @@ set splitright
 set laststatus=2
 let g:airline_powerline_fonts=1
 let g:airline#extensions#tabline#enabled=1
+
+" redl
+let g:redl_use_vsplit = 1
 
 " theme
 set background=dark
