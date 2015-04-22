@@ -17,6 +17,19 @@ set listchars=tab:▸\ ,eol:¬
 set list
 set backspace=indent,eol,start
 
+noremap \ ,
+nnoremap k gk
+nnoremap gk k
+nnoremap j gj
+nnoremap gj j
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
+noremap <Up> <Nop>
+noremap <Down> <Nop>
+noremap <Left> <Nop>
+noremap <Right> <Nop>
 imap jj <Esc>
 imap ii <Esc>
 
@@ -40,6 +53,7 @@ Plugin 'guns/vim-clojure-highlight'
 Plugin 'tpope/vim-fireplace'
 Plugin 'dgrnbrg/vim-redl'
 Plugin 'rkneufeld/vim-boot'
+Plugin 'guns/vim-slamhound'
 Plugin 'paredit.vim'
 Plugin 'bling/vim-airline'
 Plugin 'altercation/vim-colors-solarized'
